@@ -56,14 +56,14 @@ qoutput=""
 aoutput=""
 
 for i in range(len(a)):
-  qoutput += r"\item $P_1(%s, %s)$ , $P_2(%s, %s)$" %(a[i],b[i],c[i],d[i])
-  aoutput += r"\item \cRed{$m=%s$}" %(answer[i])
+  qoutput += fr"\item \( P_1({a[i]}, {b[i]}), \, P_2({c[i]}, {d[i]}) \)"
+  aoutput += fr"\item \cRed{{ \( m = {answer[i]} \)}}"
 
 \end{sagesilent}
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %	WORKSHEET INSTRUCTIONS
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\centering{Find the slope of the line given the two collinear points.}\\
+\centering{Find the slope of the line given two collinear points.}\\
 \vspace{0.5cm}
 
 \begin{multicols}{3}

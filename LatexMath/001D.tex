@@ -1,0 +1,136 @@
+%=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+%             _             _
+%            | |           | |
+%  _ __ ___  | |__    ___  | | ___   ___   _ __       ___   ___   _ __ ___
+% | '_ ` _ \ | '_ \  / _ \ | |/ __| / _ \ | '_ \     / __| / _ \ | '_ ` _ \
+% | | | | | || | | || (_) || |\__ \| (_) || | | | _ | (__ | (_) || | | | | |
+% |_| |_| |_||_| |_| \___/ |_||___/ \___/ |_| |_|(_) \___| \___/ |_| |_| |_|
+%
+% Author: Mark H. Olson
+% Website: https://mholson.com
+% Github: https://github.com/mholson
+%
+% Created: 2021-05-25
+%=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+% DOCUMENT CLASS & PACKAGES
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\documentclass[a4paper, 11pt]{article}
+
+\usepackage{mhocolorthemenord}
+\usepackage{mhomath}
+\usepackage{mhotikz}
+\usepackage{mhoworksheet}
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+% BEGIN DOCUMENT
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\begin{document}
+
+\maketitle % Print the title section
+
+\centering{Prove the following trigonometric identities}\\
+\vspace{0.5cm}
+
+\begin{multicols}{2}
+
+\begin{enumerate}
+  \item \( \sin x \equiv \dfrac{\sin x + \tan x}{1 + \sec x} \)
+  \item \( \sin x \equiv 1 - \dfrac{\cos^x}{1 + \sin x} \)
+  \item \( \sin^2 x \equiv (1-\sin^2 x)(\sec^2 x -1) \)
+  \item \( \sin^2 x \equiv \dfrac{\tan^2 x}{\tan^2 x + 1} \)
+  \item \( \sin^2 x \equiv \dfrac{\sec x \sin x }{\tan x + \cot x} \)
+  \item \( \dfrac{\sin x}{\cos x} \equiv \dfrac{1 - \cos x}{\sin x} \)
+  \item \( \dfrac{\sin^2 x}{1 + \cos^2 x} \equiv \dfrac{\sec x- \cos x}{\sec x + \cos x} \)
+  \item \( \sin^3 x  \equiv \sin x - \sin x \cos^2 x \)
+  \item \( (\sin x + \cos x)^2 \equiv 1 + \sin 2x  \)
+  \item \( (3+ \cos x)(3- \cos x) \equiv 8 + \sin^2 x \)
+  \item \( 1- (\sin x - \cos x)^2 \equiv (\sin x + \cos x)^2 - 1 \)
+  \item \( \dfrac{1}{\sin x} \equiv \dfrac{\sin x}{1 + \cos x}+\dfrac{1}{\tan x} \)
+  \item \( \dfrac{2}{\sin x} \equiv \dfrac{\sin x}{1-\cos x} + \dfrac{1-\cos x}{\sin x} \)
+  \item \( \dfrac{2}{\sin x} \equiv \dfrac{1+\cos x}{\sin x} + \dfrac{\sin x}{1 + \cos x} \)
+  \item \( \dfrac{\sin x}{\cos x +1} \equiv\dfrac{1-\cos x}{\sin x} \)
+  \item \( \sin x + \cos x \equiv \dfrac{\tan x}{\sec x} + \dfrac{\cot x}{\csc x} \)
+  \item \( \csc^2 x \equiv 1 + \cot^2 x  \)
+  \item \( \csc^2 x \equiv \dfrac{\sec^2 x}{\sec^2 x - 1} \)
+  \item \( 2 \csc x \equiv \dfrac{1-\cos x}{\sin x}+\dfrac{\sin x }{1- \cos x} \)
+  \item \( \sin^4 x - \cos^4 x \equiv 1- 2\cos^2 x \)
+  \item \( \csc^4 x - \cot^4 x \equiv \csc^2x + \cot^2 x \)
+  \item \( \csc x - \sin x \equiv \dfrac{\csc x - \sin x}{\sin x \csc x} \)
+  \item \( \csc x + \sec x \equiv (\sin x + \cos x)(\tan x + \cot x) \)
+  \item \( \dfrac{\csc x}{1-\cos x} \equiv \dfrac{\cos x + 1}{\sin^3 x} \)
+  \item \( \cos x \equiv \tan x(\csc x - \sin x)  \)
+  \item \( \dfrac{1}{\cos x} \equiv \tan x + \dfrac{\cos x}{1+\sin x} \)
+  \item \( \dfrac{1}{\cos x} \equiv \dfrac{\tan^2 x}{1-\cos x}-\dfrac{1}{\cos^2 x} \)
+  \item \( \dfrac{1}{\cos x} \equiv \dfrac{1 + \tan x}{\sin x + \cos x} \)
+  \item \( \dfrac{1}{\cos x + \cos^2 x} \equiv \dfrac{\tan x - \sin x}{\sin^3 x} \)
+  \item \( \dfrac{\sec x - 1}{\sec x + 1} \equiv \dfrac{1-\cos x}{1+\cos x} \)
+  \item \( \dfrac{\cos x}{1-\sin x} \equiv\dfrac{1+\sin x}{\cos x} \)
+  \item \( \cos^2 x \equiv \csc x \sin x - \sin^2 x \)
+  \item \( \cos^2 x \equiv \dfrac{ \csc^2 x - 1}{ \csc^2 x} \)
+  \item \( \cos^2 x \equiv \dfrac{\csc x \cos x}{\tan x + \cot x} \)
+  \item \( \cos^2 x - \sin^2 x \equiv 1 - 2 \sin^2 x \)
+  \item \( \cos^2 x - \sin^2 x \equiv \cos^4 x - \sin^4 x \)
+  \item \( \cos^2 x \equiv\dfrac{\cos^2 x - \sin^2 x}{1-\tan^2 x} \)
+  \item \( \cos 2x \equiv \dfrac{1-\tan^2 x}{1 + \tan^2 x} \)
+  \item \( \cos 3x \equiv 4 \cos^3 x - 3\cos x \)
+  \item \( 2 \cos x \cos y \equiv \cos(x+y) + \cos (x-y) \)
+  \item \( 2 \cos x \sin y \equiv \sin (x+y) - \sin (x-y) \)
+	\item \( \sec x \equiv \cos x + \sin x \tan x  \)
+  \item \( \sec x \equiv \tan x \csc x  \)
+  \item \( \sec x \equiv \sin x(\cot x + \tan x) \)
+  \item \( \sec x \equiv \dfrac{\cos x}{1 - \sin x} - \tan x \)
+  \item \( \sec^2 x \equiv \tan^2 x + 1  \)
+  \item \( \sec^2 x \equiv \tan^2 x(1+\cot^2 x) \)
+  \item \( \sec x \csc x \equiv \tan x + \cot x \)
+  \item \( \dfrac{1}{\sec x} \equiv \sec x - \tan x \sin x \)
+  \item \( \dfrac{1}{1 + \sin x} \equiv \dfrac{1-\sin x}{\cos^2 x} \)
+  \item \( \dfrac{1+\cos x}{\sin x} = \csc x + \cot x \)
+  \item \( \dfrac{1 + \sin x}{\cos^2 x} \equiv \tan^2 x + 1 \tan x \sec x \)
+  \item \( \dfrac{1 - \sin x}{1 + \sin x} \equiv (\sec x - \tan x)^2 \)
+  \item \( \dfrac{3+\sin x}{1-\sin x} \equiv\dfrac{\sin^2 x + 4 \sin x +3}{\cos^2 x} \)
+  \item \( \dfrac{\cos x}{1 - \sin x} \equiv \sec x + \tan x \)
+  \item \( \dfrac{\cos x}{1 + \sin x} \equiv \dfrac{1-\sin x}{\cos x} \)
+  \item \( 2 \sec x \equiv \dfrac{\cos x}{1 + \sin x} + \dfrac{1 + \sin x}{\cos x} \)
+  \item \( 2 \sec^2 x \equiv \dfrac{1}{1-\sin x}+\dfrac{1}{1 + \sin x} \)
+  \item \( 2 \sec^2 x \equiv \dfrac{1}{\csc x + 1} + \dfrac{1}{\csc x -1} \)
+  \item \( (\sin x + \cos x)(\tan x + \cot x) \equiv \sec x + \csc x \)
+  \item \( (\sin x - \tan x)(\cos x - \cot x) \equiv (\sin x - 1)(\cos x - 1) \)
+  \item \( 1-\sin x \cos x \equiv \dfrac{\sin^3 x + \cos^3 x}{\sin x + \cos x} \)
+  \item \( \tan x \equiv \dfrac{\sec^2 x}{\tan x} - \dfrac{1}{\tan x} \)
+  \item \( \tan^2 x \equiv \sec^2 x - \cos x \sec x  \)
+  \item \( \tan^2 x \equiv \dfrac{1-\cos 2x}{1+\cos 2x} \)
+  \item \( \tan^2 x \equiv \csc^2 x \tan^2 x -1 \)
+  \item \( \tan^2 x \equiv \dfrac{2}{\cos^2 x} - 1 \)
+  \item \( \tan^2 x \equiv \dfrac{\sin^2 x}{1-\sin^2 x} \)
+  \item \( 2\tan^2 x \equiv (1+\tan^2 x)(1-\cos 2x) \)
+  \item \( 2 \tan x \equiv \dfrac{\cos x}{1-\sin x}-\dfrac{\cos x}{1 + \sin x} \)
+  \item \( 2 \tan x \sec x \equiv \dfrac{1}{1-\sin x}- \dfrac{1}{1+\sin x} \)
+  \item \( 4 \tan x \sec x \equiv \dfrac{1+\sin x}{1-\sin x}-\dfrac{1-\sin x}{1+\sin x} \)
+  \item \( \tan^2 x \sin^2 x \equiv \tan^2 x - \sin^2 x \)
+  \item \( \dfrac{\tan x}{1- \tan^2 x} \equiv \dfrac{\sin x \cos x}{\cos^2 x - \sin^2 x} \)
+  \item \( \dfrac{1 - \tan x}{1 + \tan x} \equiv \dfrac{\cot x - 1}{\cot x + 1} \)
+  \item \( \dfrac{1+\tan^2 x}{1- \tan^2 x} \equiv \dfrac{1}{\cos^2 x - \sin^2 x} \)
+  \item \( \dfrac{1-\tan^2 x}{1 + \tan^2 x} \equiv 1 - 2 \sin^2 x \)
+  \item \( \cot x \equiv \cos x \csc x \)
+  \item \( \cot x \equiv \dfrac{\sin 2x}{1-\cos 2x} \)
+  \item \( \cot^2 x \equiv \csc^2 x - \sin^2 x - \cos^2 x \)
+  \item \( \cot^2 x  \cos^2 x \equiv \cos^4 x \csc^2 x \)
+  \item \( \cot^2 x \equiv \dfrac{1 + \cot^2 x}{1+\tan^2 x} \)
+  \item \( 1 \equiv (1 - \sin^2 x)(1+\tan^2 x) \)
+  \item \( 1 \equiv \dfrac{\csc x}{\sin x}-\dfrac{\cot x}{\tan x} \)
+  \item \( 1 \equiv \dfrac{\sec x}{\cos x}-\dfrac{\tan x}{\cot x} \)
+  \item \( 1 \equiv \dfrac{1}{1-\tan^2 x} + \dfrac{1}{1-\cot^2 x} \)
+  \item \( 1 \equiv (\csc x + \cot x)(\csc x - \cot x) \)
+  \item \( 1 \equiv \dfrac{\sin^4 x - \cos^4 x}{\sin^2 x - \cos^2 x} \)
+  \item \( 2 \equiv (1+ \tan^2 x)(1+\cos 2x) \)
+  \item \( 2 \equiv (\sin x + \cos x)^2 + (\sin x - \cos x)^2 \)
+\end{enumerate}
+
+\end{multicols}
+
+%\customfootnosage
+\end{document}
+

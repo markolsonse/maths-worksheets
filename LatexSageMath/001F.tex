@@ -1,0 +1,84 @@
+%=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+%             _             _
+%            | |           | |
+%  _ __ ___  | |__    ___  | | ___   ___   _ __       ___   ___   _ __ ___
+% | '_ ` _ \ | '_ \  / _ \ | |/ __| / _ \ | '_ \     / __| / _ \ | '_ ` _ \
+% | | | | | || | | || (_) || |\__ \| (_) || | | | _ | (__ | (_) || | | | | |
+% |_| |_| |_||_| |_| \___/ |_||___/ \___/ |_| |_|(_) \___| \___/ |_| |_| |_|
+%
+% Author: Mark H. Olson
+% Website: https://mholson.com
+% Github: https://github.com/mholson
+%
+% Created: 2021-05-25
+%=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+% DOCUMENT CLASS & PACKAGES
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\documentclass[a4paper, 11pt]{article}
+
+\usepackage{mhocolorthemenord}
+\usepackage{mhomath}
+\usepackage{mhotikz}
+\usepackage{mhoworksheet}
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+% BEGIN DOCUMENT
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\begin{document}
+
+\maketitle % Print the title section
+
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+% SAGE SILENT
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\begin{sagesilent}
+
+t=ZZ.random_element(999999)
+set_random_seed(t)
+r=[ZZ.random_element(0,5) for i in range(60)]
+trigf=cos
+angle=[0,30,45,60,90]
+farg=[angle[r[i]] for i in range(len(r))]
+fvaluea=list(map(cos, [0, pi/6, pi/4, pi/3, pi/2]))
+ans=[latex(fvaluea[r[i]]) for i in range(len(r))]
+qoutput=""
+aoutput=""
+
+for i in range(len(r)):
+  qoutput +=fr"\item \( \{trigf} \left( {farg[i]} \degree \right) \) \hfill = \framebox[10ex]{{\phantom{{\( \dfrac{{\sqrt{{a}}}}{{b}} \)}}}}"
+
+for i in range(len(r)):
+  aoutput +=fr"\item \( \{trigf} \left( {farg[i]} \degree \right) \) \hfill = \framebox[10ex]{{\(\cRed{{ {ans[i]} }}\phantom{{\dfrac{{\sqrt{{2}}}}{{2}}}} \)}}"
+
+
+\end{sagesilent}
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	WORKSHEET INSTRUCTIONS
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\centering{Write down the exact value.}\\
+\vspace{0.5cm}
+
+
+\begin{multicols}{4}
+
+\begin{enumerate}
+\sagestr{qoutput}
+\end{enumerate}
+\end{multicols}
+\customfoot
+\newpage
+
+\answers
+\begin{multicols}{4}
+
+\begin{enumerate}
+\sagestr{aoutput}
+\end{enumerate}
+\end{multicols}
+\customfoot
+\end{document}
+
